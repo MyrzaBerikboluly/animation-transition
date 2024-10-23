@@ -1,0 +1,92 @@
+.square {
+    width: 120px;
+    height: 120px;
+    border: 2px solid black;
+    background-color: blue;
+}
+
+.square:hover {
+    background-color: palevioletred;
+    width: 180px;
+    height: 180px;
+    transition: 1s;
+    animation: square 1.5s ease-in-out;
+}
+
+.square2 {
+    background-color: palevioletred;
+    width: 180px;
+    height: 180px;
+    transition: 1s;
+    display: none;
+}
+
+.square::after .square {
+    animation: square2 1.5s ease-in-out;
+}
+
+.container {
+    border: 1px solid black;
+    width: 480px;
+    height: 120px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: red;
+    animation: circle 4s infinite;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(360px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes square {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes square2 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
